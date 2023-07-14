@@ -1,4 +1,4 @@
-package repository
+package service
 
 import (
 	"bytes"
@@ -113,7 +113,6 @@ func request(timeOfDay int, dateFromToday int, isSeoul bool) ([]model.Haksik, er
 }
 
 /**
- * @api {post} /haksi 학식 정보 요청
  * fetch 함수는 request 함수를 호출하고, 결과를 HakiskInfo에 저장합니다.
  * *sync.WaitGroup: 고루틴이 모두 끝날 때까지 기다리기 위해 사용합니다.
  */
