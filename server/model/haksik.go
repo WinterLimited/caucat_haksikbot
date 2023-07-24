@@ -4,14 +4,14 @@ import "time"
 
 // Haksik: 학식 정보 구조체
 type Haksik struct {
-	Camp       string
-	Course     string
-	Date       time.Time
-	Menu       []string
-	Picture    string
-	Price      int
-	Restaurant string
-	Time       string
+	Date       time.Time `json:"date"`
+	Camp       string    `json:"camp"`
+	Time       string    `json:"time"`
+	Course     string    `json:"course"`
+	Menu       []string  `json:"menu"`
+	Picture    string    `json:"picture"`
+	Price      int       `json:"price"`
+	Restaurant string    `json:"restaurant"`
 }
 
 // FetchData: fetch 함수의 요청 데이터 구조체

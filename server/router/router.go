@@ -1,14 +1,17 @@
 package router
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"server/store"
+)
 
-func Load(r *gin.Engine) {
+func Load(r *gin.Engine, s *store.Store) {
 	// Load haksik routes
-	loadHaksikRoutes(r)
+	loadHaksikRoutes(r, s)
 
 	// Load user routes
-	loadUserRoutes(r)
+	loadUserRoutes(r, s)
 
 	// Load menu routes
-	loadMenuRoutes(r)
+	loadMenuRoutes(r, s)
 }

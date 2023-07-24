@@ -3,9 +3,10 @@ package router
 import (
 	"github.com/gin-gonic/gin"
 	"server/handler"
+	"server/store"
 )
 
-func loadMenuRoutes(r *gin.Engine) {
+func loadMenuRoutes(r *gin.Engine, s *store.Store) {
 	menuGroup := r.Group("/menu")
 	{
 		// GET /menu
